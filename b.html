@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [66,25,98,36,54,22]
+
+        let arr1 = [];
+        arr1.push(arr[0])
+        for(let i=1;i<arr.length;i++){
+
+            let cur = arr[i];
+            // console.log(cur)
+
+            for(let  j=arr1.length-1;j>=0;j--){
+
+                if(cur<arr1[j]){
+                    if(j==0){
+                        arr1.unshift(cur); 
+                    }
+
+                }else{
+                    arr1.splice(j+1,0,cur);
+                    console.log(arr1)
+                }
+
+            }
+
+        }
+        console.log(arr1)
+        
+        
+        
+    </script>
+</body>
+</html>
